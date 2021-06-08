@@ -4,34 +4,29 @@ import styled from "styled-components";
 const Navbar = () => {
   return (
       <NavContainer>
-          <Nav>
+          
         <Links>
         <Logo>Shortly</Logo>
         <Link>Features</Link>
         <Link>Pricing</Link>
         <Link>Resources</Link>
         </Links>
+
         <Links>
         <Link>Login</Link>
         <Link2>Sign up</Link2>
         </Links>
-    </Nav>
+
       </NavContainer>
     
   );
 };
 
 const NavContainer = styled.div`
-margin:2rem auto;
-padding:0 10rem;
-`
-
-const Nav = styled.div`
 display:flex;
-flex-direction:row;
-align-items:center;
-justify-content:space-between;
-`;
+justify-content:space-around;
+margin:2rem 0;
+`
 
 const Logo = styled.h1`
   font-family: "Poppins", sans-serif;
@@ -67,7 +62,10 @@ const Link2 = styled.a`
   border-radius: 20px;
   padding: 7px 20px;
   cursor: pointer;
-  transition: all 0.3s ease 0s;
+  transition: 0.3s;
+&:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 `;
 
 export default Navbar;
