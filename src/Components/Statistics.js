@@ -19,9 +19,9 @@ const Statistics = () => {
         <CardsContainer>
             <Line></Line>
         <Card1>
-            <ImageDiv>
+
             <CardImg src={BrandRecognition} />
-            </ImageDiv>
+    
             <CardTitle>Brand Recognition</CardTitle>
             <Para>Boost your recognition with each<br/> click.
                 Generic links don't mean a<br/> thing. Branded links help instil<br/>
@@ -29,18 +29,16 @@ const Statistics = () => {
             </Para>
         </Card1>
         <Card2>
-        <ImageDiv>
             <CardImg src={DetailedRecords} />
-            </ImageDiv>
+    
             <CardTitle>Detailed Records</CardTitle>
             <Para>Gain insights into who is clicking your <br />
             links. Knowing when and where<br/>people engage
             with your content<br/>helps inform better decisions.</Para>
         </Card2>
         <Card3>
-        <ImageDiv>
             <CardImg src={FullyCustomizable} />
-            </ImageDiv>
+    
             <CardTitle>Fully Customizable</CardTitle>
             <Para>Improve brand awareness and<br/>content discoverability
             through<br/>customizable links,supercharging<br/>audience engagement.</Para>
@@ -76,6 +74,7 @@ margin:0 auto;
 
 const CardsContainer = styled.div`
 position:relative;
+border:2px solid red;
 display:flex;
 margin:0 auto 15rem auto;
 top:50%;
@@ -84,7 +83,7 @@ transform:translate(-45%,-50%);
 flex-direction:row;
 flex-wrap:wrap;
 @media (max-width:375px){
-    // position:static;
+   margin-top:100rem;
 }
 `
 
@@ -193,21 +192,13 @@ font-size:20px;
 padding-top:1rem;
 `
 
+
 const CardImg = styled.img`
-position:absolute;
-top:12%;
-left:50%;
-transform:translate(-50%,-40%);
-`
-
-const ImageDiv = styled.div`
-postion:relative;
-
-height:70px;
-width:70px;
+padding:1rem;
 border-radius:50%;
 background-color:#3b3054;
 `
+
 
 const FooterContainer = styled.div`
 text-align:center;

@@ -24,7 +24,7 @@ const Jumbotron = () => {
 
 const Jcontainer = styled.div`
 display:flex;
-align-items-center;
+align-items:center;
 justify-content:space-around;
 margin-bottom:1rem;
 padding:3rem 0;
