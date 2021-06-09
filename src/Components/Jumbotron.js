@@ -25,13 +25,23 @@ const Jumbotron = () => {
 const Jcontainer = styled.div`
 display:flex;
 align-items-center;
-justify-content:space-between;
-padding-top:3rem;
+justify-content:space-around;
+margin-bottom:1rem;
+padding:3rem 0;
+@media (max-width: 1080px) {
+  display:flex;
+  flex-direction:column-reverse;
+  justify-content:center;
+  align-items:center;
+}
 `;
 
 const Content = styled.div`
 margin-left:auto;
-margin-right:175px
+@media (max-width: 1080px) {
+  text-align:center;
+  margin:0;
+}
 `;
 
 const Heading = styled.h1`
@@ -42,6 +52,10 @@ const Heading = styled.h1`
   line-height:80px;
   color: #3b3054;
   font-size: 80px;
+  @media (max-width: 1080px) {
+    font-size: 50px;
+    line-height:60px;
+  }
 `;
 
 const Para = styled.p`
@@ -67,9 +81,14 @@ const Button = styled.button`
 `
 
 const Image = styled.img`
-    width:600px;
+    width:50%;
     object-fit:contain;
-    object-position:90px 0%;
+    object-position:150px 0%;
+    @media (max-width: 1080px) {
+      width:100%;
+      object-fit:contain;
+      object-position:50px 0%;
+    }
 `;
 
 export default Jumbotron;

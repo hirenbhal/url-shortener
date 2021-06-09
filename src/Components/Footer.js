@@ -12,8 +12,13 @@ const Footer = () => {
       <Logo>Shortly</Logo>
       <CenterContainer>
         <Link>Features</Link>
+          <Content>Link Shortening</Content>
+          <Content>Branded Links</Content>
+          <Content>Analytics</Content>
         <Link>Resources</Link>
+
         <Link>Company</Link>
+
       </CenterContainer>
 
       <SocialLogos>
@@ -28,6 +33,11 @@ const Footer = () => {
 
 const CenterContainer = styled.div`
 display:flex;
+flex-wrap:wrap;
+@media (max-width: 500px) {
+  display: flex;
+  flex-direction: column;
+}
 `;
 
 const SocialLogos = styled.div``;
@@ -43,9 +53,14 @@ const Logo = styled.h1`
 const FooterContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap:wrap;
   align-items: center;
   justify-content: space-around;
   background-color: #232127;
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const Link = styled.a`
@@ -60,6 +75,12 @@ const Link = styled.a`
     color: #3b3054;
   }
 `;
+
+const Content = styled.p`
+font-family: "Poppins", sans-serif;
+font-weight: 600;
+color:grey;
+`
 
 const SocialIcons = styled.img`
   margin: 1rem;

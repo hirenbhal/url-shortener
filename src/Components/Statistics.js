@@ -39,27 +39,25 @@ const Statistics = () => {
             through<br/>customizable links,supercharging<br/>audience engagement.</Para>
         </Card>
         </CardsContainer>
-        <InputContainer>
+        <FooterContainer>
         <Heading2>
             Boost your links today
         </Heading2>
         <Button>Get Started!</Button>
-        </InputContainer>
+        </FooterContainer>
         </>
     )
 }
 
 const StatContainer = styled.div`
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
+text-align:center;
 margin-bottom:5rem;
 `
 
 const CardsContainer = styled.div`
 display:flex;
 flex-direction:row;
+flex-wrap:wrap;
 justify-content:space-around;
 `
 
@@ -78,22 +76,30 @@ const Heading = styled.h1`
   line-height:80px;
   color: #3b3054;
   font-size: 50px;
+  @media (max-width: 496px) {
+    line-height:50px;
+    padding-bottom:1rem;
+  } 
 `;
 
 const Heading2 = styled.h1`
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   letter-spacing: -1px;
-  padding-top:5rem;
+  padding:5rem 1rem 0rem 1rem ;
   line-height:80px;
   color: white;
   font-size: 50px;
 `;
 
 const Card = styled.div`
+display:flex;
+flex-direction:column;
+align-items:center;
 background-color:White;
 margin:0 0 5rem 0;
-padding:2rem;
+width:373px;
+padding-bottom:2rem;
 transition: 0.3s;
 &:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -103,6 +109,7 @@ const CardTitle = styled.p`
 font-family: "Poppins", sans-serif;
 font-weight: 700;
 font-size:20px;
+padding-top:1rem;
 `
 
 const CardImg = styled.img`
@@ -113,11 +120,8 @@ border-radius:50%;
 // object-fit:cover;
 `
 
-const InputContainer = styled.div`
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;  
+const FooterContainer = styled.div`
+text-align:center;
   background-color: #3b3054;
   padding-bottom:4rem;
 `;
