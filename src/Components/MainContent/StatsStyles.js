@@ -1,64 +1,11 @@
-import React from 'react'
 import styled from 'styled-components'
-import BrandRecognition from '../Images/icon-brand-recognition.svg'
-import FullyCustomizable from '../Images/icon-fully-customizable.svg'
-import DetailedRecords from '../Images/icon-detailed-records.svg'
 
-const Statistics = () => {
-    return (
-        <>
-        <StatContainer>
-            <Heading>
-                Advanced Statistics
-            </Heading>
-            <Para>
-                Track how your links are performing around the web
-                with <br />  our advanced statistics dashboard.
-            </Para>
-        </StatContainer>
-        <CardsContainer>
-            <Line></Line>
-        <Card1 primary>
 
-            <CardImg src={BrandRecognition} />
-    
-            <CardTitle>Brand Recognition</CardTitle>
-            <Para>Boost your recognition with each<br/> click.
-                Generic links don't mean a<br/> thing. Branded links help instil<br/>
-                confidence in your Content.
-            </Para>
-        </Card1>
-        <Card2>
-            <CardImg src={DetailedRecords} />
-    
-            <CardTitle>Detailed Records</CardTitle>
-            <Para>Gain insights into who is clicking your <br />
-            links. Knowing when and where<br/>people engage
-            with your content<br/>helps inform better decisions.</Para>
-        </Card2>
-        <Card3>
-            <CardImg src={FullyCustomizable} />
-    
-            <CardTitle>Fully Customizable</CardTitle>
-            <Para>Improve brand awareness and<br/>content discoverability
-            through<br/>customizable links,supercharging<br/>audience engagement.</Para>
-        </Card3>
-        </CardsContainer>
-        <FooterContainer>
-        <Heading2>
-            Boost your links today
-        </Heading2>
-        <Button>Get Started!</Button>
-        </FooterContainer>
-        </>
-    )
-}
-
-const StatContainer = styled.div`
+export const StatContainer = styled.div`
 text-align:center;
 margin-bottom:15rem;
 `
-const Line = styled.div`
+export const Line = styled.div`
 background-color:#2acfcf;
 height:10px;
 width:70%;
@@ -72,7 +19,7 @@ margin:0 auto;
 }
 `
 
-const CardsContainer = styled.div`
+export const CardsContainer = styled.div`
 position:relative;
 display:flex;
 margin:0 auto 16rem auto;
@@ -87,14 +34,14 @@ flex-wrap:wrap;
 }
 `
 
-const Para = styled.p`
+export const Para = styled.p`
 font-family: "Poppins", sans-serif;
   font-weight: 400;
   color: grey;
   margin-top:5px;
 `
 
-const Heading = styled.h1`
+export const Heading = styled.h1`
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   letter-spacing: -2px;
@@ -108,7 +55,7 @@ const Heading = styled.h1`
   } 
 `;
 
-const Heading2 = styled.h1`
+export const Heading2 = styled.h1`
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   letter-spacing: -1px;
@@ -118,7 +65,7 @@ const Heading2 = styled.h1`
   font-size: 50px;
 `;
 
-const Card1 = styled.div`
+export const Card1 = styled.div`
 position:absolute;
 display:flex;
 flex-direction:column;
@@ -140,7 +87,7 @@ transition: 0.3s;
 }
 
 `
-const Card2 = styled.div`
+export const Card2 = styled.div`
 position:absolute;
 display:flex;
 flex-direction:column;
@@ -162,7 +109,7 @@ transition: 0.3s;
 }
 
 `
-const Card3 = styled.div`
+export const Card3 = styled.div`
 position:absolute;
 display:flex;
 flex-direction:column;
@@ -185,7 +132,7 @@ transition: 0.3s;
 
 `
 
-const CardTitle = styled.p`
+export const CardTitle = styled.p`
 font-family: "Poppins", sans-serif;
 font-weight: 700;
 font-size:20px;
@@ -193,7 +140,7 @@ padding-top:1rem;
 `
 
 
-const CardImg = styled.img`
+export const CardImg = styled.img`
 margin-top:1rem;
 padding:1rem;
 border-radius:50%;
@@ -201,13 +148,13 @@ background-color:#3b3054;
 `
 
 
-const FooterContainer = styled.div`
+export const FooterContainer = styled.div`
 text-align:center;
   background-color: #3b3054;
   padding-bottom:4rem;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
     font-family: "Poppins", sans-serif;
   font-weight: 600;
   border:none;
@@ -223,5 +170,3 @@ const Button = styled.button`
 }
 `
 
-
-export default Statistics

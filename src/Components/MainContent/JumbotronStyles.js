@@ -1,28 +1,7 @@
-import React from "react";
 import styled from "styled-components";
-import Vector from "../Images/illustration-working.svg";
-
-const Jumbotron = () => {
-  return (
-    <Jcontainer>
-      <Content>
-        <Heading>
-          More than just
-          <br /> shorter links
-        </Heading>
-        <Para>
-          Build your brand recognition and get detailed
-          <br /> insights on how your links are performing
-        </Para>
-        <Button>Get Started</Button>
-      </Content>
-      <Image src={Vector} alt="" />
-    </Jcontainer>
-  );
-};
 
 
-const Jcontainer = styled.div`
+export const Jcontainer = styled.div`
 display:flex;
 align-items:center;
 justify-content:space-around;
@@ -36,7 +15,7 @@ padding:4rem 0;
 }
 `;
 
-const Content = styled.div`
+export const Content = styled.div`
 margin-left:auto;
 @media (max-width: 1080px) {
   text-align:center;
@@ -44,7 +23,7 @@ margin-left:auto;
 }
 `;
 
-const Heading = styled.h1`
+export const Heading = styled.h1`
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   letter-spacing: -4px;
@@ -58,13 +37,13 @@ const Heading = styled.h1`
   }
 `;
 
-const Para = styled.p`
+export const Para = styled.p`
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   color: grey;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
     font-family: "Poppins", sans-serif;
   font-weight: 600;
   border:none;
@@ -80,7 +59,7 @@ const Button = styled.button`
 }
 `
 
-const Image = styled.img`
+export const Image = styled.img`
     width:50%;
     object-fit:contain;
     object-position:150px 0%;
@@ -90,5 +69,3 @@ const Image = styled.img`
       object-position:50px 0%;
     }
 `;
-
-export default Jumbotron;

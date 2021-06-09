@@ -1,33 +1,6 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <Nav isOpen = {isOpen}>
-      <Logo isOpen={isOpen}>
-        Shortly
-      </Logo>
-      <Hamburger onClick={() => setIsOpen(!isOpen) } isOpen={isOpen}>
-        <span />
-        <span />
-        <span />
-      </Hamburger>
-      <Menu isOpen={isOpen}>
-      <Link isOpen={isOpen}>Features</Link>
-        <Link isOpen={isOpen}>Pricing</Link>
-        <Link isOpen={isOpen}>Resources</Link>
-        <Link isOpen={isOpen}>Login</Link>
-        <Link2>Sign up</Link2>
-      </Menu>
-    </Nav>
-  );
-};
-
-export default Navbar;
-
-
-const Nav = styled.div`
+export const Nav = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -40,7 +13,7 @@ const Nav = styled.div`
   right: 0;
 `;
 
-const Logo = styled.h1`
+export const Logo = styled.h1`
 font-family: "Poppins", sans-serif;
 font-weight: 700;
 color: ${props => props.isOpen ? "white": "#3b3054"};
@@ -48,7 +21,7 @@ cursor: pointer;
 margin-right:1rem;
 `;
 
-const Menu = styled.div`
+export const Menu = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,7 +35,7 @@ const Menu = styled.div`
   }
 `;
 
-const Hamburger = styled.div`
+export const Hamburger = styled.div`
   display: none;
   flex-direction: column;
   cursor: pointer;
@@ -78,7 +51,7 @@ const Hamburger = styled.div`
   }
 `;
 
-const Link = styled.a`
+export const Link = styled.a`
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   margin: 0 1rem;
@@ -98,7 +71,7 @@ const Link = styled.a`
   }
 `;
 
-const Link2 = styled.a`
+export const Link2 = styled.a`
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: white;
