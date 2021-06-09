@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Navbar from "./Components/Navbar";
+import Navbar2 from "./Components/Navbar2";
 import Jumbotron from "./Components/Jumbotron";
 import Form from "./Components/Form";
 import Statistics from "./Components/Statistics";
@@ -9,7 +9,7 @@ import Footer from "./Components/Footer";
 const App = () => {
   return (
     <div>
-      <Navbar />
+      <Navbar2 />
       <Jumbotron />
       <Background>
         <Form />

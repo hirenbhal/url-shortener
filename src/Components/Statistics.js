@@ -18,7 +18,7 @@ const Statistics = () => {
         </StatContainer>
         <CardsContainer>
             <Line></Line>
-        <Card1>
+        <Card1 primary>
 
             <CardImg src={BrandRecognition} />
     
@@ -74,16 +74,16 @@ margin:0 auto;
 
 const CardsContainer = styled.div`
 position:relative;
-border:2px solid red;
 display:flex;
-margin:0 auto 15rem auto;
+margin:0 auto 16rem auto;
 top:50%;
 left:50%;
 transform:translate(-45%,-50%);
 flex-direction:row;
 flex-wrap:wrap;
 @media (max-width:375px){
-   margin-top:100rem;
+   margin-top:35rem;
+   margin-bottom:0;
 }
 `
 
@@ -125,7 +125,7 @@ flex-direction:column;
 align-items:center;
 background-color:White;
 margin:0 0 5rem 0;
-left:2rem;
+left:7rem;
 top:-9rem;
 width:373px;
 padding-bottom:2rem;
@@ -167,7 +167,7 @@ position:absolute;
 display:flex;
 flex-direction:column;
 align-items:center;
-left:1000px;
+left:58rem;
 top:-3rem;
 background-color:White;
 margin:0 0 5rem 0;
@@ -194,6 +194,7 @@ padding-top:1rem;
 
 
 const CardImg = styled.img`
+margin-top:1rem;
 padding:1rem;
 border-radius:50%;
 background-color:#3b3054;

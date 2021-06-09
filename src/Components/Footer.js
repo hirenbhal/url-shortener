@@ -79,7 +79,7 @@ const FooterContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding-bottom:2rem;
+  padding:2rem;
   justify-content: space-around;
   background-color: #232127;
   @media (max-width: 900px) {

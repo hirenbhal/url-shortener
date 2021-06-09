@@ -27,7 +27,7 @@ display:flex;
 align-items:center;
 justify-content:space-around;
 margin-bottom:1rem;
-padding:3rem 0;
+padding:4rem 0;
 @media (max-width: 1080px) {
   display:flex;
   flex-direction:column-reverse;
@@ -48,7 +48,7 @@ const Heading = styled.h1`
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   letter-spacing: -4px;
-  padding-top:5rem;
+  padding-top:3rem;
   line-height:80px;
   color: #3b3054;
   font-size: 80px;

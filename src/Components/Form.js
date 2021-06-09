@@ -76,8 +76,8 @@ const Form = () => {
 
       {newURLs.map((newURL) => {
         let subStr;
-        if((newURL.prev).length>41){
-          subStr = newURL.prev.substring(0, 41);
+        if((newURL.prev).length>26){
+          subStr = newURL.prev.substring(0, 26);
           subStr = subStr + '...';
         } else{
         subStr = newURL.prev;
@@ -214,7 +214,6 @@ transition: 0.3s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }@media (max-width: 900px) {
   padding:0.5rem 8rem;
-  
 }
 `;
 
