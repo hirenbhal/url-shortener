@@ -10,15 +10,28 @@ const Footer = () => {
   return (
     <FooterContainer>
       <Logo>Shortly</Logo>
+
       <CenterContainer>
-        <Link>Features</Link>
+        <SubLinks>
+          <Link>Features</Link>
           <Content>Link Shortening</Content>
           <Content>Branded Links</Content>
           <Content>Analytics</Content>
-        <Link>Resources</Link>
+        </SubLinks>
 
-        <Link>Company</Link>
-
+        <SubLinks>
+          <Link>Resources</Link>
+          <Content>Blog</Content>
+          <Content>Developers</Content>
+          <Content>Support</Content>
+        </SubLinks>
+        <SubLinks>
+          <Link>Company</Link>
+          <Content>About</Content>
+          <Content>Our Team</Content> 
+          <Content>Careers</Content>
+          <Content>Contact</Content>
+        </SubLinks>
       </CenterContainer>
 
       <SocialLogos>
@@ -32,29 +45,41 @@ const Footer = () => {
 };
 
 const CenterContainer = styled.div`
-display:flex;
-flex-wrap:wrap;
-@media (max-width: 500px) {
   display: flex;
-  flex-direction: column;
-}
+  align-items:center;
+  justify-content:center;
+  flex-wrap: wrap;
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
-const SocialLogos = styled.div``;
+const SubLinks = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+const SocialLogos = styled.div`
+margin:2rem 0;
+`;
 
 const Logo = styled.h1`
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   color: white;
   cursor: pointer;
-  margin-right: 1rem;
+  margin:2rem 1rem;
 `;
 
 const FooterContainer = styled.div`
   display: flex;
   flex-direction: row;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   align-items: center;
+  padding-bottom:2rem;
   justify-content: space-around;
   background-color: #232127;
   @media (max-width: 900px) {
@@ -76,11 +101,15 @@ const Link = styled.a`
   }
 `;
 
-const Content = styled.p`
-font-family: "Poppins", sans-serif;
-font-weight: 600;
-color:grey;
-`
+const Content = styled.a`
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: grey;
+  cursor:pointer;
+  &:hover{
+    color:cyan;
+  }
+`;
 
 const SocialIcons = styled.img`
   margin: 1rem;

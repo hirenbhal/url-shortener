@@ -17,27 +17,34 @@ const Statistics = () => {
             </Para>
         </StatContainer>
         <CardsContainer>
-        <Card>
+            <Line></Line>
+        <Card1>
+            <ImageDiv>
             <CardImg src={BrandRecognition} />
+            </ImageDiv>
             <CardTitle>Brand Recognition</CardTitle>
             <Para>Boost your recognition with each<br/> click.
                 Generic links don't mean a<br/> thing. Branded links help instil<br/>
                 confidence in your Content.
             </Para>
-        </Card>
-        <Card>
-        <CardImg src={DetailedRecords} />
+        </Card1>
+        <Card2>
+        <ImageDiv>
+            <CardImg src={DetailedRecords} />
+            </ImageDiv>
             <CardTitle>Detailed Records</CardTitle>
             <Para>Gain insights into who is clicking your <br />
             links. Knowing when and where<br/>people engage
             with your content<br/>helps inform better decisions.</Para>
-        </Card>
-        <Card>
-        <CardImg src={FullyCustomizable} />
+        </Card2>
+        <Card3>
+        <ImageDiv>
+            <CardImg src={FullyCustomizable} />
+            </ImageDiv>
             <CardTitle>Fully Customizable</CardTitle>
             <Para>Improve brand awareness and<br/>content discoverability
             through<br/>customizable links,supercharging<br/>audience engagement.</Para>
-        </Card>
+        </Card3>
         </CardsContainer>
         <FooterContainer>
         <Heading2>
@@ -51,14 +58,34 @@ const Statistics = () => {
 
 const StatContainer = styled.div`
 text-align:center;
-margin-bottom:5rem;
+margin-bottom:15rem;
+`
+const Line = styled.div`
+background-color:#2acfcf;
+height:10px;
+width:70%;
+margin:0 auto;
+@media (max-width:375px){
+    width:10px;
+    height:80%;
+    position:absolute;
+    left:50%;
+    z-index:1;
+}
 `
 
 const CardsContainer = styled.div`
+position:relative;
 display:flex;
+margin:0 auto 15rem auto;
+top:50%;
+left:50%;
+transform:translate(-45%,-50%);
 flex-direction:row;
 flex-wrap:wrap;
-justify-content:space-around;
+@media (max-width:375px){
+    // position:static;
+}
 `
 
 const Para = styled.p`
@@ -92,10 +119,35 @@ const Heading2 = styled.h1`
   font-size: 50px;
 `;
 
-const Card = styled.div`
+const Card1 = styled.div`
+position:absolute;
 display:flex;
 flex-direction:column;
 align-items:center;
+background-color:White;
+margin:0 0 5rem 0;
+left:2rem;
+top:-9rem;
+width:373px;
+padding-bottom:2rem;
+transition: 0.3s;
+&:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+@media (max-width:375px){
+    position:static;
+    z-index:2;
+}
+
+`
+const Card2 = styled.div`
+position:absolute;
+display:flex;
+flex-direction:column;
+align-items:center;
+left:525px;
+top:-6rem;
 background-color:White;
 margin:0 0 5rem 0;
 width:373px;
@@ -104,7 +156,36 @@ transition: 0.3s;
 &:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+
+@media (max-width:375px){
+    position:static;
+    z-index:2;
+}
+
 `
+const Card3 = styled.div`
+position:absolute;
+display:flex;
+flex-direction:column;
+align-items:center;
+left:1000px;
+top:-3rem;
+background-color:White;
+margin:0 0 5rem 0;
+width:373px;
+padding-bottom:2rem;
+transition: 0.3s;
+&:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+@media (max-width:375px){
+    position:static;
+    z-index:2;
+}
+
+`
+
 const CardTitle = styled.p`
 font-family: "Poppins", sans-serif;
 font-weight: 700;
@@ -113,11 +194,19 @@ padding-top:1rem;
 `
 
 const CardImg = styled.img`
-background-color:#3b3054;
-padding:10px;
-border:none;
+position:absolute;
+top:12%;
+left:50%;
+transform:translate(-50%,-40%);
+`
+
+const ImageDiv = styled.div`
+postion:relative;
+
+height:70px;
+width:70px;
 border-radius:50%;
-// object-fit:cover;
+background-color:#3b3054;
 `
 
 const FooterContainer = styled.div`
